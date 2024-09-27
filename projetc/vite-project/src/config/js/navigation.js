@@ -6,6 +6,9 @@ export const useNavigation = () => {
     const handleAddClick = () => {
         navigate('/createInform');
     };
+    
+    const dinamickNavigate = (path) => navigate(`/${path}`);
 
-    return { handleAddClick };
+
+    return { handleAddClick, dinamickNavigate };
 };

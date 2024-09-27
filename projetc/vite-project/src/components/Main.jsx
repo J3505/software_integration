@@ -1,6 +1,6 @@
 // import Tabla from "./Tabla/FilterTable"
 import Header from "./Main_components/Header";
-import Table from "../components/Tabla/Table";
+import Table from "./Tabla/Table";
 
 const Main = () => {
   return (

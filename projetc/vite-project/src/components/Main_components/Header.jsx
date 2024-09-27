@@ -1,15 +1,24 @@
 import StI from '../../assets/img/softwareIntegration.png'
 import User from '../../assets/img/User.png'
+
+import { useNavigation } from "../../config/js/navigation";
+
 const Header = () => {
+
+
+
+    const {dinamickNavigate} = useNavigation();
   return (
     <div>
         <header className="text-gray-600  font-roboto border border-b-2">
             <div className="container  mx-auto flex flex-wrap p-2 flex-col md:flex-row items-center">
                 <nav className=" lg:w-2/5 flex-wrap items-center text-base md:ml-auto hidden md:flex">
-                    <a className="mr-5 hover:text-gray-900 hover:cursor-pointer">Inicio</a>
-                    <a className="mr-5 hover:text-gray-900">Second Link</a>
+                    <a className="mr-5 hover:text-gray-900 hover:cursor-pointer hover:border-b-[0.5px]" onClick={()=>dinamickNavigate('')}   >
+                    Salir
+                    </a>
+                    {/* <a className="mr-5 hover:text-gray-900">Second Link</a>
                     <a className="mr-5 hover:text-gray-900">Third Link</a>
-                    <a className="hover:text-gray-900">Fourth Link</a>
+                    <a className="hover:text-gray-900">Fourth Link</a> */}
                 </nav>
 
                 <a className="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0">
