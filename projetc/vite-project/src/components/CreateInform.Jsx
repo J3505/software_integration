@@ -4,6 +4,6 @@ const CreateInform = () => {
       hola mundo
     </div>
   )
-};
+}
 
 export default CreateInform
