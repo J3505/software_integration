@@ -25,7 +25,7 @@ export const useLogin = () => {
       setError('Verifica tu usuario y contraseña.');
       setLoading(false);
     } else if (data) {
-      console.log('Acceso correcto:', data);
+      console.log('Acceso correcto');
       setError(null);
 
       setTimeout(() => {

@@ -4,8 +4,6 @@ import { useState } from 'react';
 import Tippy from '@tippy.js/react';
 import 'tippy.js/dist/tippy.css';
 
-import pdf from '../../assets/img/pdf.svg';
-import plus from '../../assets/img/plus.svg';
 
 const Table = () => {
     
@@ -51,34 +49,6 @@ const Table = () => {
                             <strong>Agregar</strong>
                         </button>
                         </Tippy>
-
-                        <Tippy  content="Mostrar informacion de los documentos" >
-                        <button onClick={handleAddClick} className="bg-[#41a8f4] text-white border-2 border-b-4 border-black rounded-md p-2 px-3 hover:cursor-pointer">
-                            <strong>Mostrar</strong>
-                        </button>
-                        </Tippy>
-
-                        <Tippy  content="Imprimir documentos" >
-                        <button onClick={() => window.print()} className="bg-[#41a8f4] text-white border-2 border-b-4 border-black rounded-md p-2 px-3 hover:cursor-pointer">
-                            <img src={pdf} alt="" />
-                            {/* <strong>Imprimir</strong> */}
-                        </button>
-                        </Tippy>
-
-                        <Tippy  content="Agregar fila" >
-                            <button onClick={plusAddClick} className="bg-[#41a8f4] text-white border-2 border-b-4 border-black rounded-md p-2 px-3 hover:cursor-pointer">
-                                {/* <strong>Agregar fila</strong> */}
-                                <img src={plus} alt="" />
-                            </button>
-                        </Tippy>
-
-                        <Tippy  content="Ver pdf" >
-                        <button onClick={handleAddClick} className="bg-[#41a8f4] text-white border-2 border-b-4 border-black rounded-md p-2 px-3 hover:cursor-pointer">
-                            <strong>Encabezada</strong>
-                        </button>
-                        </Tippy>
-
-
                     </div>
 
                     
