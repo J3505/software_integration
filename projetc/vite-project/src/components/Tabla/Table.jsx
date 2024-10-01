@@ -3,11 +3,15 @@ import { useNavigation } from "../../config/js/navigation";
 import { useState } from 'react';
 import Tippy from '@tippy.js/react';
 import 'tippy.js/dist/tippy.css';
+import { Modalpdf } from "../modal/Modalpdf";
 
 
-const Table = () => {
+
+const Table = ( ) => {
     
     const { handleAddClick } = useNavigation();
+    const [ openModal, SetOpenModal ] = useState (false);
+
     const [rows,  setRows ] = useState([
         { id: 1, asunto: 'Respuesta 02', dia: 20, mes: 'Setiembre', anio: 2024 },
         { id: 2, asunto: 'Respuesta 02', dia: 20, mes: 'Setiembre', anio: 2024 },
@@ -16,11 +20,8 @@ const Table = () => {
         { id: 5, asunto: 'Respuesta 02', dia: 20, mes: 'Setiembre', anio: 2024 },
         { id: 6, asunto: 'Respuesta 02', dia: 20, mes: 'Setiembre', anio: 2024 },
         { id: 7, asunto: 'Respuesta 02', dia: 20, mes: 'Setiembre', anio: 2024 },
-        
         { id: 8, asunto: 'Respuesta 02', dia: 20, mes: 'Setiembre', anio: 2024 },
-        { id: 9, asunto: 'Respuesta 02', dia: 20, mes: 'Setiembre', anio: 2024 },
-        { id: 10, asunto: 'Respuesta 02', dia: 20, mes: 'Setiembre', anio: 2024 },
-
+ 
     ]);
 
     // const plusAddClick = () => {setRows
@@ -38,25 +39,31 @@ const Table = () => {
     return (
         // relative
         <>
-            <div className="h-[580px] font-roboto m-2  relativo border-2 rounded-md overflow-x-auto">
+            
+            < Modalpdf open={openModal} onClose={() => SetOpenModal(false)} />
+
+            <div className="h-[590px] font-roboto m-4  relativo border-2 rounded-md overflow-x-auto">
                 
-                <div className="bg-red flex justify-between items-center gap-6 m-8">
-                    <div className="flex gap-4">
-                        <select name="lista" id="lista" className="border-2 border-gray-300 rounded-md p-2 px-3">
+                <div className="bg-red flex justify-between items-center  m-2">
+                    
+                    <div className="hidden  md:flex md:w-[85%] md:justify-between">
+                        <select name="lista" id="lista" className="border-2 border-gray-300 rounded-md p-2 px-3 ">
                             <option value="01">Seleccionar</option>
                             <option value="01">Doc Tipo 01</option>
                             <option value="02">Doc Tipo 02</option>
                             <option value="03">Doc Tipo 03</option>
                             <option value="04">Doc Tipo 04</option>
                         </select>
+
                         <input type="text" placeholder="Buscar..." className="border-2 border-gray-300 rounded-md p-2 px-3" />
+
                         <DaySelector />
                     </div>
 
-                    <div className="flex gap-2 ">
+                    <div className="flex w-[15%] justify-end">
 
                         <Tippy  content="Agregar" >
-                        <button onClick={handleAddClick} className="bg-[#41a8f4] text-white border-2 border-b-4 border-black rounded-md p-2 px-3 hover:cursor-pointer">
+                        <button onClick={handleAddClick} className="bg-[#41a8f4] text-white border-2 border-b-4 border-black rounded-md p-2 px-4 hover:cursor-pointer">
                             <strong>Agregar</strong>
                         </button>
                         </Tippy>
@@ -88,7 +95,10 @@ const Table = () => {
                                             <td className="px-6 py-2">{row.mes}</td>
                                             <td className="px-6 py-2">{row.anio}</td>
                                             <td className="px-6 py-2">
-                                                <a href="#" className="decoration-1">Visualizar</a>
+                                                {/* <a href="#" className="decoration-1">Visualizar</a> */}
+                                                <button className="bg-[#41a8f4] text-white border-2 border-b-4 border-black rounded-md p-1 px-2 hover:cursor-pointer" onClick={() => SetOpenModal(true)}>Previsualizar</button>
+                                                
+
                                             </td>
                                         </tr>
                                 ))}

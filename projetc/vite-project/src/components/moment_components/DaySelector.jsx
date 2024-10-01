@@ -7,7 +7,7 @@ const DaySelector = () => {
     const [selectedDate, setSelectedDate] = useState(null);
 
     const handleDateChange = (date) => {
-
+      
       const dateFormat = moment(date).format('DD/MM/YYYY');
       console.log(`Fecha seleccionada: ${dateFormat}`);
       setSelectedDate(date);

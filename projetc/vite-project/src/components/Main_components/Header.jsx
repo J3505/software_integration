@@ -1,7 +1,8 @@
 import StI from '../../assets/img/softwareIntegration.png'
 import User from '../../assets/img/User.png'
-
+import { FaDoorClosed } from "react-icons/fa";
 import { useNavigation } from "../../config/js/navigation";
+import Tippy from '@tippy.js/react';
 
 const Header = () => {
 
@@ -13,9 +14,12 @@ const Header = () => {
         <header className="text-gray-600  font-roboto border border-b-2">
             <div className="container  mx-auto flex flex-wrap p-2 flex-col md:flex-row items-center">
                 <nav className=" lg:w-2/5 flex-wrap items-center text-base md:ml-auto hidden md:flex">
+                
+                    <Tippy content="Salir">
                     <a className="mr-5 hover:text-gray-900 hover:cursor-pointer hover:border-b-[0.5px]" onClick={()=>dinamickNavigate('')}   >
-                    Salir
+                        <FaDoorClosed style={{fontSize:"30px"}} />
                     </a>
+                    </Tippy>
                     {/* <a className="mr-5 hover:text-gray-900">Second Link</a>
                     <a className="mr-5 hover:text-gray-900">Third Link</a>
                     <a className="hover:text-gray-900">Fourth Link</a> */}
