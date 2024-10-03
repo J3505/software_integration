@@ -1,7 +1,8 @@
 import StI from '../../assets/img/softwareIntegration.png'
 import User from '../../assets/img/User.png'
-import { FaDoorClosed } from "react-icons/fa";
+import { IoExitOutline } from "react-icons/io5";
 import { useNavigation } from "../../config/js/navigation";
+import { GrDocumentConfig } from "react-icons/gr";
 import Tippy from '@tippy.js/react';
 
 const Header = () => {
@@ -17,12 +18,20 @@ const Header = () => {
                 
                     <Tippy content="Salir">
                     <a className="mr-5 hover:text-gray-900 hover:cursor-pointer hover:border-b-[0.5px]" onClick={()=>dinamickNavigate('')}   >
-                        <FaDoorClosed style={{fontSize:"30px"}} />
+                        <IoExitOutline style={{fontSize:"30px"}} />
                     </a>
                     </Tippy>
-                    {/* <a className="mr-5 hover:text-gray-900">Second Link</a>
-                    <a className="mr-5 hover:text-gray-900">Third Link</a>
-                    <a className="hover:text-gray-900">Fourth Link</a> */}
+
+                    <Tippy content="Actividades">
+
+                        <a className="mr-5 hover:text-gray-900 hover:cursor-pointer hover:border-b-[0.5px]" onClick={()=>dinamickNavigate('Work')}>
+
+                            <GrDocumentConfig  style={{fontSize:"27px"}} />
+                        </a>
+                    </Tippy>
+                    
+                    {/* <a className="mr-5 hover:text-gray-900">Third Link</a>
+                    <a className="hover:text-gray-900">Fourth Link</a> */} 
                 </nav>
 
                 <a className="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0">

@@ -17,7 +17,8 @@ const DaySelector = () => {
 
   return (
     <div>
-      <DatePicker className="border-2 border-gray-300 rounded-md p-2 px-3"
+      <DatePicker 
+        className="border-2 border-gray-300 rounded-md p-2 px-3"
         placeholderText={currentDateTime}
         selected={selectedDate}
         onChange={handleDateChange}

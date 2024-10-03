@@ -38,7 +38,7 @@ export const Modalpdf = ({open, onClose }) => {
 
   return (
     <>
-        <div className="font-roboto backdrop-blur-sm w-full h-full fixed inset-0" > 
+        <div className="font-roboto backdrop-blur-sm z-50 w-full h-full fixed inset-0" > 
             
 
             <div className=" m-2" onClick={(e) => {e.stopPropagation();}}>
