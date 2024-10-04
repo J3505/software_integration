@@ -53,7 +53,7 @@ export const Modalpdf = ({ open, onClose }) => {
                                 <p className='font-bold'>EL PRINCIPITO  </p>
 
                             </div>
-                            <button className='bg-[#41a8f4] text-white border-2 border-b-4 border-black rounded-md p-2 px-3 hover:cursor-pointer' onClick={onClose}> <AiOutlineClose /> </button>
+                            <button className='bg-[#41a8f4] text-white border-2 border-b-4 border-black rounded-md p-2 px-3 hover:cursor-pointer hover:bg-red-500' onClick={onClose}> <AiOutlineClose /> </button>
                         </div>
                     </div>
                     {/* pdf-preview */}

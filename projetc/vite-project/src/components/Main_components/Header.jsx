@@ -22,13 +22,13 @@ const Header = () => {
                     </a>
                     </Tippy>
 
-                    <Tippy content="Actividades">
+                    {/* <Tippy content="Actividades">
 
                         <a className="mr-5 hover:text-gray-900 hover:cursor-pointer hover:border-b-[0.5px]" onClick={()=>dinamickNavigate('Work')}>
 
                             <GrDocumentConfig  style={{fontSize:"27px"}} />
                         </a>
-                    </Tippy>
+                    </Tippy> */}
                     
                     {/* <a className="mr-5 hover:text-gray-900">Third Link</a>
                     <a className="hover:text-gray-900">Fourth Link</a> */} 
