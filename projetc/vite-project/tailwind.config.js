@@ -10,7 +10,12 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        roboto: ['Roboto', 'sans-serif'], 
+        roboto: ['Roboto', 'sans-serif'],
+      },
+      screens: {
+        'baseP':'0px',
+        'minP': '360px',
+        'maxP': '1800px'
       },
     },
   },
