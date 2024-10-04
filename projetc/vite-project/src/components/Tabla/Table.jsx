@@ -24,18 +24,6 @@ const Table = ( ) => {
  
     ]);
 
-    // const plusAddClick = () => {setRows
-    //     const newRow = {
-    //         id: rows.length + 1,
-    //         asunto: `Respuesta ${rows.length + 1}`, 
-    //         dia: 21, 
-    //         mes: 'Octubre',
-    //         ano: 2024 
-    //     };
-    //     setRows([...rows, newRow]); 
-    // };
-
-
     return (
         // relative
         <>

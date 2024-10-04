@@ -1,10 +1,8 @@
-import { useState } from 'react';
 
-export default function TableInput() {
-    
-    
+
+export const TableInput = () => {
     return (
-        <>
+        <div>
             <div className="flex justify-center">
                 <div className="overflow-x-auto w-full max-w-[80%]">
                     <table className="min-w-full text-sm text-left rtl:text-right text-gray-500">
@@ -39,7 +37,8 @@ export default function TableInput() {
                     </table>
                 </div>
             </div>
-
-        </>
-    );
+        </div>
+    )
 }
+
+

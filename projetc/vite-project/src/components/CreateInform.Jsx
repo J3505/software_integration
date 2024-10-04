@@ -1,15 +1,17 @@
 import { useNavigation } from "../config/js/navigation";
 import { useState } from 'react';
 import Header from "./Main_components/Header";
-import Input from "./Inputs/Input";
-import TableInput from "./Tabla/TableInput";
-import Modaledit from "./modal/Modaledit";
+import Ingresar from "./Inputs/Ingresar";
+import { TableInput } from "./Tabla/TableInput";
+
+
+
 
 
 
 const CreateInform = () => {
   const { dinamickNavigate } = useNavigation();
-  const [ openModal, SetOpenModal ] = useState (false);
+  // const [openModal, SetOpenModal] = useState(false);
 
 
   const [isEditing, setIsEditing] = useState(false);
@@ -35,10 +37,10 @@ const CreateInform = () => {
 
   return (
     < >
-        <Modaledit onClose={() => SetOpenModal(false)} />
-        <Header />
+
+      <Header />
       <div className="h-[20%] border" >
-        < Input />
+        < Ingresar />
         < TableInput />
       </div>
 
